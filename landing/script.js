@@ -25,6 +25,17 @@
     a.href = CONFIG.published ? store : github;
     if (CONFIG.published) a.rel = 'noopener';
   });
+  // Links that only make sense once the listing exists (e.g. "Chrome Web Store" in the footer)
+  document.querySelectorAll('[data-store-only]').forEach(function (a) { a.hidden = !CONFIG.published; });
+
+  // Deep links to a FAQ answer (discusshn.com/#data) open it
+  function openTarget() {
+    var el = location.hash && document.getElementById(location.hash.slice(1));
+    if (el && el.tagName === 'DETAILS') el.open = true;
+  }
+  window.addEventListener('hashchange', openTarget);
+  openTarget();
+
   if (!CONFIG.published) {
     document.querySelectorAll('[data-install-label]').forEach(function (s) { s.textContent = 'Install from GitHub'; });
     document.querySelectorAll('[data-install-note]').forEach(function (p) { p.hidden = false; });

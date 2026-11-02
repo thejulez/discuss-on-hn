@@ -170,3 +170,29 @@ details p { color: var(--text-2); padding: 0 0 20px; }
 }
 .panel img { width: min(360px, 100%); box-shadow: var(--shadow); }
 
+
+/* --- phones ----------------------------------------------------------------- */
+
+.hero-panel { display: none; }
+[hidden] { display: none !important; }
+
+@media (max-width: 820px) {
+  .hero { padding-top: 32px; }
+  .hero-shot { display: none; }
+  .hero-panel { display: grid; margin-top: 32px; padding: 24px 16px; }
+  .actions { flex-direction: column; align-items: stretch; max-width: 360px; margin-left: auto; margin-right: auto; }
+  .actions .btn { justify-content: center; min-height: 50px; }
+  .btn-sm { min-height: 40px; }
+  .brand { font-size: 15px; min-height: 44px; }
+  .feature .copy { padding: 0 2px; }
+  h3 { font-size: 23px; }
+  summary { padding-top: 16px; padding-bottom: 16px; min-height: 48px; }
+  .foot nav { gap: 6px 20px; flex-wrap: wrap; }
+  .foot nav a { padding: 8px 0; }
+  .cta { margin-top: 72px; }
+}
+
+@media (max-width: 380px) {
+  .nav { gap: 8px; }
+  .btn-sm { padding: 6px 12px; font-size: 13px; }
+}

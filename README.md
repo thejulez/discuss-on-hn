@@ -38,7 +38,9 @@ No AI, no servers, no analytics, no host permissions. It only talks to HN's publ
 
 ## Install
 
-From the Chrome Web Store: _link once published_.
+Website: **https://discusshn.com**
+
+From the Chrome Web Store: https://chromewebstore.google.com/detail/fbidofcpfgnmlfgfgakookemmgihbhjn (live once review passes).
 
 From source:
 

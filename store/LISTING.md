@@ -83,6 +83,7 @@ A browser tab is gone the moment you close it. The icon stays in your toolbar. S
 • Talks only to Hacker News' public APIs, only when you open the panel (plus a reply check every 5 minutes if you set a username)
 • Tracking parameters and anything that looks like a token are stripped from addresses before they're looked up
 
+Website: https://discusshn.com
 Unofficial and open source (MIT): https://github.com/thejulez/discuss-on-hn
 Not affiliated with Y Combinator or Hacker News.
 ```
@@ -112,8 +113,8 @@ All screenshots are 1280×800 PNG; upload them in this order.
 
 | Field | Value |
 |---|---|
-| Official URL | None (needs a verified domain) |
-| Homepage URL | https://github.com/thejulez/discuss-on-hn |
+| Official URL | https://discusshn.com, once the domain is verified in Google Search Console (optional; shows a verified-publisher link) |
+| Homepage URL | https://discusshn.com |
 | Support URL | https://github.com/thejulez/discuss-on-hn/issues |
 | Mature content | No |
 
@@ -173,8 +174,9 @@ Why this is correct: the address of the page the user is viewing is sent to the 
 
 ### Privacy policy URL **(paste)**
 ```
-https://github.com/thejulez/discuss-on-hn/blob/main/PRIVACY.md
+https://discusshn.com/privacy
 ```
+Until discusshn.com is live, use https://github.com/thejulez/discuss-on-hn/blob/main/PRIVACY.md, and switch to the discusshn.com address in a later update.
 
 ---
 
