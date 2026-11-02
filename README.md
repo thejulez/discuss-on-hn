@@ -68,6 +68,8 @@ From source:
 | `store/` | Chrome Web Store listing text and assets. Not part of the extension package. |
 | `landing/` | The one-page website: static HTML/CSS, deployed to Vercel with `landing/` as the root. Flip `published` in `landing/script.js` once the store listing is live. |
 | `scripts/package.sh` | Builds the upload zip in `dist/`. |
+| `scripts/build-privacy.py` | Rebuilds `landing/privacy.html` from `PRIVACY.md`. |
+| `scripts/go-live.sh` | Points the site's "Add to Chrome" at the store listing once it's public. |
 
 ## Releasing
 
@@ -84,13 +86,12 @@ Everything in [`store/assets/`](store/assets) is free to use when writing about 
 | Asset | File | Size |
 |---|---|---|
 | Icon (source) | [`icon.svg`](store/assets/icon.svg) | vector |
-| Logo, transparent | [`logo-512.png`](store/assets/logo-512.png), [`logo-1024.png`](store/assets/logo-1024.png) | 512, 1024 px |
+| Logo, transparent | [`logo-1024.png`](store/assets/logo-1024.png) | 1024 px |
 | Avatar (beige square) | [`logo-avatar-1024.png`](store/assets/logo-avatar-1024.png) | 1024 px |
 | Icon (toolbar / store) | [`icons/`](icons) | 16, 32, 48, 128 px |
 | Marquee | [`promo-marquee-1400x560.png`](store/assets/promo-marquee-1400x560.png) | 1400×560 |
 | Small tile | [`promo-small-440x280.png`](store/assets/promo-small-440x280.png) | 440×280 |
 | Screenshots | `screenshot-1…5-*.png` | 1280×800 |
-| Icon explorations | [`icon-options.png`](store/assets/icon-options.png) | |
 
 Colours: HN orange `#ff6600` on HN beige `#f6f6ef`, white `#ffffff`. The mark is a speech bubble (conversation) carrying HN's upvote triangle (community); it doesn't use the Y Combinator "Y".
 

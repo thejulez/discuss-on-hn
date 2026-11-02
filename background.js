@@ -181,12 +181,12 @@ const poll = () => exclusive(() => pollOnce(false));
 // seed = true: first run after setting a username. Existing replies are loaded as
 // already read (for the "Earlier replies" list) and only later ones count as new.
 async function pollOnce(seed) {
-  const stored = await store.get(["username", "seenKids", "replies", "unread", "storySeen", "karmaLog"]);
+  const stored = await store.get(["username", "seenKids", "replies", "storySeen", "karmaLog"]);
   const { username, seenKids = {}, storySeen = {}, karmaLog = [] } = stored;
   if (!username) return null;
-  // Versions before 1.6 kept only an `unread` list: carry it over and backfill history once
+  // No reply history yet (first run for this username): load existing replies as already read
   const backfill = seed || !Array.isArray(stored.replies);
-  const history = stored.replies || (stored.unread || []).map((r) => ({ ...r, read: false }));
+  const history = stored.replies || [];
   const user = await getJSON(`${FB}/user/${encodeURIComponent(username)}.json`);
   if (!user) return null;
 
@@ -245,7 +245,6 @@ async function pollOnce(seed) {
   const replies = all.filter((r) => !r.read || readKept++ < MAX_REPLIES - unreadCount);
   const keepSeen = Object.fromEntries(stories.map((s) => [s.id, storySeen[s.id]]));
   await store.set({ seenKids: nextSeen, replies, me, storySeen: keepSeen, karmaLog: log });
-  await store.remove("unread");
   await setBadge();
   return { ...me, replies };
 }
@@ -266,7 +265,7 @@ async function setUsername(name) {
   const user = name ? await findUser(name) : null;
   if (name && !user) return { ok: false, error: `No HN user called "${name}". Check the spelling.` };
   return exclusive(async () => {
-    await store.remove(["username", "seenKids", "replies", "unread", "me", "storySeen", "karmaLog"]);
+    await store.remove(["username", "seenKids", "replies", "me", "storySeen", "karmaLog"]);
     if (!user) { await setBadge(); return { ok: true }; }
     await store.set({ username: user.id });
     await pollOnce(true);
