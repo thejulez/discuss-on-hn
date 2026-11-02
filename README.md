@@ -6,7 +6,7 @@
 
 <p align="center">
   <b>Join the Hacker News conversation about any page.</b><br>
-  Chime in, start it if it's missing, never double-post, never miss a reply.
+  Chime in, start it if it's missing, avoid double-posts, catch replies.
 </p>
 
 <p align="center">
@@ -18,10 +18,10 @@ An unofficial Hacker News companion for Chrome that gets you into the conversati
 You find something interesting. One click on the icon tells you whether people are already talking about it:
 
 - **Chime in.** Every HN thread for the page, with its top comments, so you can join where the conversation already is.
-- **Never double-post.** It checks first, even across tracking and AMP variants of the address, and sends you to the existing thread.
+- **Avoid double-posting.** It checks first, even when the address carries tracking parameters, and sends you to the existing thread.
 - **See the wider conversation.** Comments elsewhere on HN that linked to the page, and the best posts from the same site.
 - **Start it if it's missing.** "Post to HN" opens HN's own submit form with a clean, guideline-friendly title. You press submit; nothing is automated.
-- **Stay in it.** The icon sits in your toolbar long after the tab is gone. Set your username and it lights up when someone replies, shows new comments on your posts and how your karma moved.
+- **Stay in it.** The icon sits in your toolbar long after the tab is gone. Set your username and it lights up when someone replies to your recent posts or comments, shows new comments on your posts and how your karma moved.
 
 No AI, no servers, no analytics, no host permissions. It only talks to HN's public APIs, and only when you open the panel (plus a reply check every 5 minutes if you set a username). See [PRIVACY.md](PRIVACY.md).
 
@@ -105,7 +105,7 @@ Colours: HN orange `#ff6600` on HN beige `#f6f6ef`, white `#ffffff`. The mark is
 - **Push to `main`** and it deploys automatically, but only when something under `landing/` changed; extension-only commits are skipped.
 - **Deploy by hand:** `cd landing && vercel deploy --prod`.
 - **When the store listing goes live:** set `published: true` in `landing/script.js` and push. Every "Add to Chrome" then opens the listing.
-- `landing/privacy.html` is generated from `PRIVACY.md`; regenerate it when the policy changes.
+- `landing/privacy.html` is generated from `PRIVACY.md`: after editing the policy, run `python3 scripts/build-privacy.py`.
 
 ## Contact
 

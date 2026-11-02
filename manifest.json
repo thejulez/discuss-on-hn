@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Discuss on HN",
   "version": "1.0.0",
-  "description": "Join the Hacker News conversation about any page: chime in, start it if it's missing, never double-post, never miss a reply.",
+  "description": "Join the Hacker News conversation about any page: chime in, start it if it's missing, avoid double-posts, catch replies.",
   "permissions": [
     "activeTab",
     "contextMenus",

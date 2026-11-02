@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Discuss on HN | Join the Hacker News conversation about any page</title>
-  <meta name="description" content="A free Chrome extension that shows you the Hacker News conversation about the page you're on. Chime in, start it if it's missing, never double-post, never miss a reply.">
+  <meta name="description" content="A free Chrome extension that shows you the Hacker News conversation about the page you're on. Chime in, start it if it's missing, avoid double-posting, and catch replies to your posts.">
   <link rel="canonical" href="https://discusshn.com/">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#f6f6ef">
@@ -14,7 +14,7 @@
   <meta property="og:url" content="https://discusshn.com/">
   <meta property="og:site_name" content="Discuss on HN">
   <meta property="og:title" content="Found it on the web? Talk about it on HN.">
-  <meta property="og:description" content="A free Chrome extension: see the Hacker News threads for any page, chime in, start it if it's missing, never double-post, never miss a reply.">
+  <meta property="og:description" content="A free Chrome extension: see the Hacker News threads for any page, chime in, start it if it's missing, and catch replies to your posts.">
   <meta property="og:image" content="https://discusshn.com/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -43,6 +43,7 @@
     "author": { "@type": "Person", "name": "Julian Paul", "url": "https://julianpaul.me", "email": "julian@discusshn.com", "sameAs": ["https://x.com/itsjulianpaul", "https://github.com/thejulez"] }
   }
   </script>
+  <script defer src="https://analytics.neuklick.com/script.js" data-website-id="7256ebe0-2f1e-47fa-ac2d-c909529be1db" data-domains="discusshn.com" data-do-not-track="true"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -64,12 +65,12 @@
   <section class="hero">
     <p class="eyebrow">Free Chrome extension · open source</p>
     <h1>Found it on the web?<br><em>Talk about it on HN.</em></h1>
-    <p class="lede">Discuss on HN shows you the Hacker News conversation about the page you're on. Chime into the thread that exists, start it if it doesn't, never double-post, and never miss a reply.</p>
+    <p class="lede">Discuss on HN shows you the Hacker News conversation about the page you're on. Chime into the thread that exists, start it if it doesn't, avoid double-posting, and catch replies to your own posts.</p>
     <div class="actions">
       <a class="btn" data-install href="#get"><span data-install-label>Add to Chrome</span> <span class="free">free</span></a>
       <a class="btn btn-ghost" href="https://github.com/thejulez/discuss-on-hn">View the source</a>
     </div>
-    <p class="note">No account, no tracking, no AI. Not affiliated with Y Combinator or Hacker News.</p>
+    <p class="note">The extension has no accounts, no tracking and no AI. Not affiliated with Y Combinator or Hacker News.</p>
     <figure class="frame hero-shot">
       <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><span>paulgraham.com/kids.html</span><img src="assets/icon.svg" width="18" height="18" alt=""></div>
       <img src="assets/shot-posted.jpg" width="1600" height="971" alt="The Discuss on HN panel on Paul Graham's essay Having Kids: three Hacker News threads, the top comments and a Discuss on HN button">
@@ -95,10 +96,10 @@
 
     <article class="feature" id="chime-in">
       <div class="copy">
-        <p class="tag">Chime in · never double-post</p>
+        <p class="tag">Chime in · avoid double-posts</p>
         <h3>Join the conversation where it already is</h3>
-        <p>Every Hacker News thread for the page, with points, comments and age, and the top comments in HN's own ranking. You see where the discussion stands before you jump in, and one click takes you to the thread.</p>
-        <p>It finds the page even on tracking-link and AMP versions of the address, so you join the existing thread instead of posting a duplicate.</p>
+        <p>The Hacker News threads for the page, with points, comments and age, and its top comments in HN's own ranking. You see where the discussion stands before you jump in, and one click takes you to the thread.</p>
+        <p>It finds the page even when the address carries tracking parameters, so you join the existing thread instead of posting a duplicate.</p>
       </div>
       <figure class="panel"><img src="assets/panel-posted.png" width="720" height="1184" loading="lazy" alt="Hacker News threads and top comments for the current page"></figure>
     </article>
@@ -107,7 +108,7 @@
       <div class="copy">
         <p class="tag">See the whole conversation</p>
         <h3>Related discussions, not just one thread</h3>
-        <p>Comments anywhere on HN that linked to the page, and the best-received posts from the same site. Often the most interesting discussion is one you'd never have found.</p>
+        <p>Comments elsewhere on HN that linked to the page, and the most upvoted posts from the same site. Sometimes the best discussion is in a thread you'd never have found.</p>
       </div>
       <figure class="panel"><img src="assets/panel-related.png" width="720" height="1312" loading="lazy" alt="Mentioned in comments and other posts from the same site"></figure>
     </article>
@@ -125,7 +126,7 @@
       <div class="copy">
         <p class="tag">Stay in it</p>
         <h3>The bubble remembers, so you don't have to</h3>
-        <p>A tab is gone the moment you close it. The bubble stays in your toolbar. Set your HN username and it lights up when someone replies to your posts or comments, shows "+N new" comments on your recent posts, and how your karma moved.</p>
+        <p>A tab is gone the moment you close it. The bubble stays in your toolbar. Set your HN username and it lights up when someone replies to your recent posts or comments, shows "+N new" comments on your recent posts, and how your karma moved.</p>
       </div>
       <figure class="panel"><img src="assets/panel-you.png" width="720" height="856" loading="lazy" alt="The You tab with a new reply, karma and recent posts"></figure>
     </article>
@@ -144,8 +145,8 @@
     <h2>A good HN citizen</h2>
     <div class="cards">
       <div class="card"><b>Never posts for you</b><span>It opens HN's own form. Posting, voting and commenting stay with you, as HN's guidelines ask.</span></div>
-      <div class="card"><b>No AI, ever</b><span>Nothing is generated. What you post and write is yours.</span></div>
-      <div class="card"><b>Private by design</b><span>No servers, accounts or analytics. It talks only to HN's public APIs, only when you click, with tracking and token-like parameters stripped first.</span></div>
+      <div class="card"><b>No AI</b><span>Nothing is generated. What you post and write is yours.</span></div>
+      <div class="card"><b>Private by design</b><span>The extension has no servers, accounts or analytics. It talks only to Hacker News' public APIs, only when you click, with tracking and token-like parameters stripped first.</span></div>
       <div class="card"><b>No site access</b><span>No host permissions: it can only see the tab you clicked the bubble on. <a href="privacy.html">Privacy policy</a></span></div>
     </div>
   </section>
@@ -155,8 +156,8 @@
     <details id="free"><summary>Is it free?</summary><p>Yes, completely. It's open source under the MIT license. There's nothing to buy and no account to create.</p></details>
     <details id="posting"><summary>Does it post to Hacker News for me?</summary><p>No. "Post to HN" opens Hacker News' own submit form with the title and address filled in, the same way HN's official bookmarklet does. You review it and press submit yourself.</p></details>
     <details id="account"><summary>Do I need a Hacker News account?</summary><p>Not to see threads and comments. To post or comment you use your normal HN login on news.ycombinator.com. Setting your username in the extension is optional; it only powers the reply badge and the You tab.</p></details>
-    <details id="data"><summary>What does it send, and to whom?</summary><p>When you click the bubble, the cleaned page address goes to Hacker News' public search API (hn.algolia.com) to find threads, and to HN's official API for comments. With a username set, it checks HN's API for replies every 5 minutes; that request contains only your public username. Nothing is sent while you browse. Full details in the <a href="privacy.html">privacy policy</a>.</p></details>
-    <details id="browsers"><summary>Which browsers does it work in?</summary><p>Chrome, and Chromium-based browsers that install from the Chrome Web Store, such as Edge, Brave, Arc and Dia.</p></details>
+    <details id="data"><summary>What does it send, and to whom?</summary><p>When you click the bubble, the page address, with tracking and token-like parameters removed, goes to Hacker News' public search (hn.algolia.com) to find threads and related discussions; the thread's ID then goes to HN's official API for its top comments. With a username set, it checks HN's official API for replies every 5 minutes, and that request contains only your public username. Nothing is sent while you browse. The extension itself has no tracking or analytics; this website counts visits with cookieless analytics (Umami). Full details in the <a href="privacy.html">privacy policy</a>.</p></details>
+    <details id="browsers"><summary>Which browsers does it work in?</summary><p>It's built for Chrome. Other Chromium-based browsers that install Chrome Web Store extensions should work too.</p></details>
     <details id="affiliation"><summary>Is it made by Hacker News or Y Combinator?</summary><p>No. It's an independent, unofficial tool by <a href="https://julianpaul.me" rel="noopener" target="_blank">Julian Paul</a> (<a href="https://x.com/itsjulianpaul" rel="noopener" target="_blank">@itsjulianpaul</a>).</p></details>
     <details id="support"><summary>Something's wrong or missing. Where do I say?</summary><p>Email <a href="mailto:julian@discusshn.com">julian@discusshn.com</a> or <a href="https://github.com/thejulez/discuss-on-hn/issues">open an issue on GitHub</a>.</p></details>
   </section>
@@ -164,7 +165,7 @@
   <section class="cta" id="get">
     <img src="assets/icon.svg" width="64" height="64" alt="">
     <h2>Get into the conversation</h2>
-    <p>Free. One click on any page.</p>
+    <p>Free. One click on any web page.</p>
     <a class="btn" data-install href="#get"><span data-install-label>Add to Chrome</span> <span class="free">free</span></a>
     <p class="note" data-install-note hidden>Coming to the Chrome Web Store shortly. Until then, <a href="https://github.com/thejulez/discuss-on-hn#install">install it from GitHub</a> in a minute.</p>
   </section>

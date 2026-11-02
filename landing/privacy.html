@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy policy | Discuss on HN</title>
-  <meta name="description" content="What Discuss on HN sends, stores and never touches.">
+  <meta name="description" content="What the Discuss on HN extension and discusshn.com send and store.">
   <link rel="canonical" href="https://discusshn.com/privacy">
   <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
   <link rel="stylesheet" href="style.css">
+  <script defer src="https://analytics.neuklick.com/script.js" data-website-id="7256ebe0-2f1e-47fa-ac2d-c909529be1db" data-domains="discusshn.com" data-do-not-track="true"></script>
 </head>
 <body>
 <header class="nav">
@@ -15,58 +16,38 @@
   <nav class="nav-links" aria-label="Primary"><a href="/">Home</a><a class="btn btn-sm" data-install href="/#get"><span data-install-label>Add to Chrome</span></a></nav>
 </header>
 <main class="doc">
-<!-- Generated from PRIVACY.md; edit that file and regenerate -->
-<h1>Discuss on HN: Privacy Policy</h1>
+<!-- Generated from PRIVACY.md by scripts/build-privacy.py; edit that file and rerun -->
+<h1>Privacy Policy</h1>
 <p><i>Last updated: 2 November 2026</i></p>
-<p>Discuss on HN is an unofficial Hacker News companion for Chrome. It is not affiliated with Y Combinator or Hacker News. It has no servers, no accounts and no analytics: everything below happens in your browser, and the only places it talks to are Hacker News' two public, read-only APIs.</p>
-<h2>What it sends, and when</h2>
-<h3>Only when you open the panel (toolbar icon or Alt+Shift+Y)</h3>
-<p>Before anything is sent, the page address is cleaned: the <code>#fragment</code>, tracking parameters (<code>utm_*</code>, <code>fbclid</code>, <code>gclid</code>, <code>mc_*</code>) and any parameter that looks like a credential (names containing <code>token</code>, <code>key</code>, <code>code</code>, <code>auth</code>, <code>session</code>, <code>sig</code>, <code>secret</code>, <code>pass</code>, <code>email</code>, <code>state</code>, <code>ticket</code>, <code>otp</code>) are removed.</p>
-<p>To the <b>HN Search API</b> (<code>hn.algolia.com</code>, run by Algolia for Hacker News):</p>
+<p>This policy covers the Discuss on HN Chrome extension and the website discusshn.com. Discuss on HN is an unofficial tool by Julian Paul and is not affiliated with Y Combinator or Hacker News.</p>
+<p><b>In short:</b></p>
 <ul>
-<li>the cleaned page address without <code>https://</code> or <code>www.</code> (and the page's canonical address, if it declares one on the same site), to find HN threads for this page and HN comments that link to it;</li>
-<li>the page's hostname (e.g. <code>scour.ing</code>), to list other HN posts from the same site.</li>
+<li><b>The extension does no tracking and has no analytics.</b> It talks only to Hacker News' public APIs, and only to look up the page you ask about or your own public HN activity.</li>
+<li><b>The website, discusshn.com, uses cookieless analytics</b> to count visits. That's described separately below and has nothing to do with the extension.</li>
 </ul>
-<p>To the <b>official HN API</b> (<code>hacker-news.firebaseio.com</code>):</p>
+<h2>The extension</h2>
+<h3>What it sends</h3>
+<p>The extension has no servers of its own. It sends requests only to Hacker News' two public APIs: the official HN API (<code>hacker-news.firebaseio.com</code>) and HN Search (<code>hn.algolia.com</code>).</p>
+<p><b>When you open the panel</b> (toolbar icon or Alt+Shift+Y) on a page, it sends:</p>
 <ul>
-<li>the ID of the HN thread for this page, to load its top comments.</li>
+<li>to HN Search: the page's address, and the page's canonical address if it declares one on the same site, to find HN threads for the page and comments that link to it; and the page's hostname, to find other HN posts from the same site;</li>
+<li>to the official HN API: the IDs of the HN thread it found and of its top comments, to load them.</li>
 </ul>
-<h3>Only if you set your HN username</h3>
-<ul>
-<li>When you save it, your username is looked up on the official HN API. If that exact capitalisation isn't found, the HN Search API is asked for the correctly capitalised name.</li>
-<li>Every 5 minutes, and when you open the "You" tab, the official HN API is asked for your public profile and your 30 most recent posts and comments, to show your karma and spot new replies. These requests contain your public username and nothing about the pages you visit.</li>
-</ul>
-<h3>Never</h3>
-<p>Nothing is sent while you browse normally. The extension never sends cookies, page content, your HN password or your HN session. It never posts, votes or comments for you: "Post to HN" opens Hacker News' own submit form with the title and address filled in, and you press submit there yourself.</p>
-<h2>What it stores</h2>
-<p>On your device only, in Chrome's extension storage (<code>chrome.storage.local</code>):</p>
-<ul>
-<li>your HN username, if you set one;</li>
-<li>the IDs of replies already seen and your latest 100 replies (for the "Earlier replies" list);</li>
-<li>comment counts on your recent posts as of when you last looked (for "+N new");</li>
-<li>karma readings from the last 48 hours (for "+12 in 24h");</li>
-<li>your karma and recent posts as last fetched;</li>
-<li>your panel preferences: how it closes after you open a link, and which sections you left open or closed.</li>
-</ul>
-<p>Removing your username in the panel deletes everything tied to your account (your panel preferences stay). Uninstalling the extension deletes all of it.</p>
-<h2>What it doesn't do</h2>
-<ul>
-<li>No analytics, tracking, advertising or fingerprinting.</li>
-<li>No servers of its own, and no third parties besides the two HN APIs above.</li>
-<li>Data is never sold, transferred or used for anything other than the features described here, and never used to determine creditworthiness or for lending.</li>
-</ul>
-<h2>Permissions</h2>
-<table>
-<tr><th>Permission</th><th>Used for</th></tr>
-<tr><td><code>activeTab</code></td><td>Reading the current tab's address and title, and drawing the panel in it, only after you click the icon or press the shortcut.</td></tr>
-<tr><td><code>scripting</code></td><td>Drawing the panel in that tab.</td></tr>
-<tr><td><code>contextMenus</code></td><td>The "Submit this page / link to HN" right-click items.</td></tr>
-<tr><td><code>storage</code></td><td>Remembering the items listed under "What it stores".</td></tr>
-<tr><td><code>alarms</code></td><td>Checking for new replies every 5 minutes, only when a username is set.</td></tr>
-</table>
-<p>The extension has no host permissions and can't read or change any site on its own.</p>
+<p>Before an address is sent, its <code>#fragment</code>, tracking parameters (<code>utm_*</code>, <code>fbclid</code>, <code>gclid</code>, <code>mc_*</code>) and parameters whose names suggest credentials (containing <code>token</code>, <code>key</code>, <code>code</code>, <code>auth</code>, <code>session</code>, <code>sig</code>, <code>secret</code>, <code>pass</code>, <code>email</code>, <code>state</code>, <code>ticket</code> or <code>otp</code>) are removed.</p>
+<p><b>If you set your HN username</b>, it sends your username to the official HN API when you save it (and to HN Search if needed to correct its capitalisation), and every 5 minutes, and when you open the "You" tab, to fetch your public profile, your 30 most recent posts and comments, and the replies to them. These requests contain your username and HN item IDs, and nothing about the pages you visit.</p>
+<p>Nothing is sent while you browse without opening the panel. On the page you open it on, the extension reads only the address, the title and a few meta tags (canonical address, <code>og:url</code>, <code>og:title</code>, <code>og:site_name</code>), and never the page's content. The title is used only to fill in the "Post to HN" form. The right-click "Submit link to HN" item uses the link's address and any text you've selected, only to fill in that same form. The extension doesn't send cookies, and never posts, votes or comments: "Post to HN" opens Hacker News' own submit form, and you press submit.</p>
+<h3>What it stores</h3>
+<p>Only on your device, in Chrome's extension storage: your HN username, if you set one; your karma and recent posts as last fetched; replies to your posts and comments, and which you've seen; comment counts and karma readings used for "+N new" and "+12 in 24h"; and your panel settings. Removing your username in the panel deletes the account data; uninstalling the extension deletes everything.</p>
+<h3>Permissions</h3>
+<p><code>activeTab</code> and <code>scripting</code> let it read the current tab's address and title and show the panel, only in the tab where you open it. <code>contextMenus</code> adds the right-click "Submit to HN" items. <code>storage</code> keeps the data above. <code>alarms</code> runs the 5-minute reply check, only if you set a username. It has no access to other sites.</p>
+<h2>The website (discusshn.com)</h2>
+<p>This section is about the website only; the extension sends nothing to it or to its analytics.</p>
+<p>The website uses Umami, a privacy-focused analytics tool we host ourselves at analytics.neuklick.com, to count visits. It records the page address, page title, referrer, screen size and browser language. It sets no cookies. As with any website, your IP address and browser are visible to the server when the page loads. If your browser sends Do Not Track, no analytics are recorded.</p>
+<p>The website collects nothing else, and the extension contains no analytics.</p>
+<h2>Sharing</h2>
+<p>Data is never sold or shared, and is used only for the features described here.</p>
 <h2>Contact</h2>
-<p>Questions or concerns: email <a href="mailto:julian@discusshn.com">julian@discusshn.com</a>, or open an issue at <a href="https://github.com/thejulez/discuss-on-hn/issues">https://github.com/thejulez/discuss-on-hn/issues</a>.</p>
+<p><a href="mailto:julian@discusshn.com">julian@discusshn.com</a>, or <a href="https://github.com/thejulez/discuss-on-hn/issues">https://github.com/thejulez/discuss-on-hn/issues</a>.</p>
 </main>
 <footer class="foot">
   <p><img src="assets/icon.svg" width="18" height="18" alt=""><span>Discuss on HN · by <a href="https://x.com/itsjulianpaul" rel="noopener" target="_blank">@itsjulianpaul</a></span></p>

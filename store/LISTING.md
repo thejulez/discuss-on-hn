@@ -4,7 +4,7 @@ Everything the developer dashboard asks for, in the order it asks. Blocks marked
 
 ## The story in one line
 
-> You found something interesting. Discuss on HN gets you into the Hacker News conversation about it: chime into the thread that exists, start it if it doesn't, never double-post, and never miss a reply.
+> You found something interesting. Discuss on HN gets you into the Hacker News conversation about it: chime into the thread that exists, start it if it doesn't, avoid double-posting, and catch replies to your posts.
 
 Every asset and every paragraph below follows the same arc:
 
@@ -39,8 +39,8 @@ Every asset and every paragraph below follows the same arc:
 ### Title (from the manifest)
 Discuss on HN
 
-### Summary (from the manifest, 124 of 132 characters)
-Join the Hacker News conversation about any page: chime in, start it if it's missing, never double-post, never miss a reply.
+### Summary (from the manifest, 120 of 132 characters)
+Join the Hacker News conversation about any page: chime in, start it if it's missing, avoid double-posts, catch replies.
 
 ### Description **(paste)**
 
@@ -50,17 +50,17 @@ Found something interesting on the web? Discuss on HN gets you into the Hacker N
 Click the icon (or press Alt+Shift+Y) on any page and a small, HN-style panel opens in the corner.
 
 ━━ CHIME IN WHERE THE CONVERSATION ALREADY IS
-• Every Hacker News thread for the page you're on, with points, comments and age
+• The Hacker News threads for the page you're on, with points, comments and age
 • The top comments in HN's own ranking, so you know where the discussion stands before you join
 • One click to "Discuss on HN" and you're in the thread
 
-━━ NEVER DOUBLE-POST
-• Before you post, it checks whether the page is already on HN, including tracking-link and AMP variants of the address
+━━ AVOID DOUBLE-POSTING
+• Before you post, it checks whether the page is already on HN, even when the address carries tracking parameters
 • If it is, it sends you to the existing thread instead
 
 ━━ SEE THE WHOLE CONVERSATION
-• Comments anywhere on HN that linked to this page
-• The best-received posts from the same site
+• Comments elsewhere on HN that linked to this page
+• The most upvoted posts from the same site
 
 ━━ START IT IF IT'S MISSING
 • "Post to HN" opens Hacker News' own submit form with the address and a clean title filled in
@@ -69,7 +69,7 @@ Click the icon (or press Alt+Shift+Y) on any page and a small, HN-style panel op
 
 ━━ STAY IN THE CONVERSATION
 A browser tab is gone the moment you close it. The icon stays in your toolbar. Set your HN username (optional) and:
-• The icon lights up with a count when someone replies to your posts or comments
+• The icon lights up with a count when someone replies to your recent posts or comments
 • The "You" tab shows new replies, earlier ones, and "+N new" comments on your recent posts
 • See your karma and how it moved in the last day
 
@@ -80,7 +80,7 @@ A browser tab is gone the moment you close it. The icon stays in your toolbar. S
 ━━ PRIVATE BY DESIGN
 • No AI, no servers, no accounts, no analytics
 • No host permissions: it can't read any site on its own
-• Talks only to Hacker News' public APIs, only when you open the panel (plus a reply check every 5 minutes if you set a username)
+• Talks only to Hacker News' public APIs (its official API and hn.algolia.com search), only when you open the panel, plus a reply check every 5 minutes if you set a username
 • Tracking parameters and anything that looks like a token are stripped from addresses before they're looked up
 
 Website: https://discusshn.com

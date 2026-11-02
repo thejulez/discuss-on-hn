@@ -1,62 +1,49 @@
-# Discuss on HN: Privacy Policy
+# Privacy Policy
 
 _Last updated: 2 November 2026_
 
-Discuss on HN is an unofficial Hacker News companion for Chrome. It is not affiliated with Y Combinator or Hacker News. It has no servers, no accounts and no analytics: everything below happens in your browser, and the only places it talks to are Hacker News' two public, read-only APIs.
+This policy covers the Discuss on HN Chrome extension and the website discusshn.com. Discuss on HN is an unofficial tool by Julian Paul and is not affiliated with Y Combinator or Hacker News.
 
-## What it sends, and when
+**In short:**
+- **The extension does no tracking and has no analytics.** It talks only to Hacker News' public APIs, and only to look up the page you ask about or your own public HN activity.
+- **The website, discusshn.com, uses cookieless analytics** to count visits. That's described separately below and has nothing to do with the extension.
 
-### Only when you open the panel (toolbar icon or Alt+Shift+Y)
+## The extension
 
-Before anything is sent, the page address is cleaned: the `#fragment`, tracking parameters (`utm_*`, `fbclid`, `gclid`, `mc_*`) and any parameter that looks like a credential (names containing `token`, `key`, `code`, `auth`, `session`, `sig`, `secret`, `pass`, `email`, `state`, `ticket`, `otp`) are removed.
+### What it sends
 
-To the **HN Search API** (`hn.algolia.com`, run by Algolia for Hacker News):
-- the cleaned page address without `https://` or `www.` (and the page's canonical address, if it declares one on the same site), to find HN threads for this page and HN comments that link to it;
-- the page's hostname (e.g. `scour.ing`), to list other HN posts from the same site.
+The extension has no servers of its own. It sends requests only to Hacker News' two public APIs: the official HN API (`hacker-news.firebaseio.com`) and HN Search (`hn.algolia.com`).
 
-To the **official HN API** (`hacker-news.firebaseio.com`):
-- the ID of the HN thread for this page, to load its top comments.
+**When you open the panel** (toolbar icon or Alt+Shift+Y) on a page, it sends:
+- to HN Search: the page's address, and the page's canonical address if it declares one on the same site, to find HN threads for the page and comments that link to it; and the page's hostname, to find other HN posts from the same site;
+- to the official HN API: the IDs of the HN thread it found and of its top comments, to load them.
 
-### Only if you set your HN username
+Before an address is sent, its `#fragment`, tracking parameters (`utm_*`, `fbclid`, `gclid`, `mc_*`) and parameters whose names suggest credentials (containing `token`, `key`, `code`, `auth`, `session`, `sig`, `secret`, `pass`, `email`, `state`, `ticket` or `otp`) are removed.
 
-- When you save it, your username is looked up on the official HN API. If that exact capitalisation isn't found, the HN Search API is asked for the correctly capitalised name.
-- Every 5 minutes, and when you open the "You" tab, the official HN API is asked for your public profile and your 30 most recent posts and comments, to show your karma and spot new replies. These requests contain your public username and nothing about the pages you visit.
+**If you set your HN username**, it sends your username to the official HN API when you save it (and to HN Search if needed to correct its capitalisation), and every 5 minutes, and when you open the "You" tab, to fetch your public profile, your 30 most recent posts and comments, and the replies to them. These requests contain your username and HN item IDs, and nothing about the pages you visit.
 
-### Never
+Nothing is sent while you browse without opening the panel. On the page you open it on, the extension reads only the address, the title and a few meta tags (canonical address, `og:url`, `og:title`, `og:site_name`), and never the page's content. The title is used only to fill in the "Post to HN" form. The right-click "Submit link to HN" item uses the link's address and any text you've selected, only to fill in that same form. The extension doesn't send cookies, and never posts, votes or comments: "Post to HN" opens Hacker News' own submit form, and you press submit.
 
-Nothing is sent while you browse normally. The extension never sends cookies, page content, your HN password or your HN session. It never posts, votes or comments for you: "Post to HN" opens Hacker News' own submit form with the title and address filled in, and you press submit there yourself.
+### What it stores
 
-## What it stores
+Only on your device, in Chrome's extension storage: your HN username, if you set one; your karma and recent posts as last fetched; replies to your posts and comments, and which you've seen; comment counts and karma readings used for "+N new" and "+12 in 24h"; and your panel settings. Removing your username in the panel deletes the account data; uninstalling the extension deletes everything.
 
-On your device only, in Chrome's extension storage (`chrome.storage.local`):
+### Permissions
 
-- your HN username, if you set one;
-- the IDs of replies already seen and your latest 100 replies (for the "Earlier replies" list);
-- comment counts on your recent posts as of when you last looked (for "+N new");
-- karma readings from the last 48 hours (for "+12 in 24h");
-- your karma and recent posts as last fetched;
-- your panel preferences: how it closes after you open a link, and which sections you left open or closed.
+`activeTab` and `scripting` let it read the current tab's address and title and show the panel, only in the tab where you open it. `contextMenus` adds the right-click "Submit to HN" items. `storage` keeps the data above. `alarms` runs the 5-minute reply check, only if you set a username. It has no access to other sites.
 
-Removing your username in the panel deletes everything tied to your account (your panel preferences stay). Uninstalling the extension deletes all of it.
+## The website (discusshn.com)
 
-## What it doesn't do
+This section is about the website only; the extension sends nothing to it or to its analytics.
 
-- No analytics, tracking, advertising or fingerprinting.
-- No servers of its own, and no third parties besides the two HN APIs above.
-- Data is never sold, transferred or used for anything other than the features described here, and never used to determine creditworthiness or for lending.
+The website uses Umami, a privacy-focused analytics tool we host ourselves at analytics.neuklick.com, to count visits. It records the page address, page title, referrer, screen size and browser language. It sets no cookies. As with any website, your IP address and browser are visible to the server when the page loads. If your browser sends Do Not Track, no analytics are recorded.
 
-## Permissions
+The website collects nothing else, and the extension contains no analytics.
 
-| Permission | Used for |
-|---|---|
-| `activeTab` | Reading the current tab's address and title, and drawing the panel in it, only after you click the icon or press the shortcut. |
-| `scripting` | Drawing the panel in that tab. |
-| `contextMenus` | The "Submit this page / link to HN" right-click items. |
-| `storage` | Remembering the items listed under "What it stores". |
-| `alarms` | Checking for new replies every 5 minutes, only when a username is set. |
+## Sharing
 
-The extension has no host permissions and can't read or change any site on its own.
+Data is never sold or shared, and is used only for the features described here.
 
 ## Contact
 
-Questions or concerns: email julian@discusshn.com, or open an issue at https://github.com/thejulez/discuss-on-hn/issues.
+julian@discusshn.com, or https://github.com/thejulez/discuss-on-hn/issues.
