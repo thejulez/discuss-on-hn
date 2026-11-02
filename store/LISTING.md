@@ -192,10 +192,7 @@ https://discusshn.com/privacy
 ## 5. Test instructions (optional, helps review) **(paste)**
 
 ```
-No account or login needed.
-1. Open https://paulgraham.com/kids.html and click the toolbar icon: the panel shows its Hacker News threads, top comments, comments that linked to it and other posts from paulgraham.com.
-2. Open any page that isn't on Hacker News (for example a new blog post) and click the icon: the panel offers "Post to HN", which only opens Hacker News' own submit form prefilled. Nothing is submitted automatically.
-3. Optional: click "settings" in the panel's title bar, enter the public HN username "pg", then open the "You" tab to see karma, recent posts and replies.
+No login needed. Open https://paulgraham.com/foundermode.html and click the toolbar icon: the panel shows its Hacker News threads and top comments. On a page that isn't on HN, "Post to HN" only opens HN's own submit form prefilled; nothing is submitted automatically.
 ```
 
 ---
