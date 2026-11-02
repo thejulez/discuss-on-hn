@@ -96,6 +96,15 @@ Colours: HN orange `#ff6600` on HN beige `#f6f6ef`, white `#ffffff`. The mark is
   <img src="store/assets/promo-small-440x280.png" width="440" alt="Discuss on HN small promo tile">
 </p>
 
+## Website
+
+`landing/` is https://discusshn.com, a static site on Vercel (project `discuss-on-hn`, team neuklick) connected to this repo:
+
+- **Push to `main`** and it deploys automatically, but only when something under `landing/` changed; extension-only commits are skipped.
+- **Deploy by hand:** `cd landing && vercel deploy --prod`.
+- **When the store listing goes live:** set `published: true` in `landing/script.js` and push. Every "Add to Chrome" then opens the listing.
+- `landing/privacy.html` is generated from `PRIVACY.md`; regenerate it when the policy changes.
+
 ## License
 
 MIT. Not affiliated with Y Combinator or Hacker News.
