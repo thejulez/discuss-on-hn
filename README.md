@@ -84,6 +84,8 @@ Everything in [`store/assets/`](store/assets) is free to use when writing about 
 | Asset | File | Size |
 |---|---|---|
 | Icon (source) | [`icon.svg`](store/assets/icon.svg) | vector |
+| Logo, transparent | [`logo-512.png`](store/assets/logo-512.png), [`logo-1024.png`](store/assets/logo-1024.png) | 512, 1024 px |
+| Avatar (beige square) | [`logo-avatar-1024.png`](store/assets/logo-avatar-1024.png) | 1024 px |
 | Icon (toolbar / store) | [`icons/`](icons) | 16, 32, 48, 128 px |
 | Marquee | [`promo-marquee-1400x560.png`](store/assets/promo-marquee-1400x560.png) | 1400×560 |
 | Small tile | [`promo-small-440x280.png`](store/assets/promo-small-440x280.png) | 440×280 |
