@@ -64,6 +64,7 @@ From source:
 | `overlay.js` | The panel, injected only on click, in a closed shadow root so pages can't style or read it. |
 | `icons/` | Toolbar and store icons. |
 | `store/` | Chrome Web Store listing text and assets. Not part of the extension package. |
+| `landing/` | The one-page website: static HTML/CSS, deployed to Vercel with `landing/` as the root. Flip `published` in `landing/script.js` once the store listing is live. |
 | `scripts/package.sh` | Builds the upload zip in `dist/`. |
 
 ## Releasing
