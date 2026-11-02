@@ -88,7 +88,7 @@ Not affiliated with Y Combinator or Hacker News.
 ```
 
 ### Category
-Social & Communication
+Social Networking (under Lifestyle). If not listed: Communication (under Productivity)
 
 ### Language
 English
