@@ -54,7 +54,8 @@ kbd {
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px);
 }
-.brand { display: flex; align-items: center; gap: 10px; font: 700 16px Verdana, Geneva, sans-serif; text-decoration: none; }
+.brand { display: flex; align-items: center; gap: 8px; font: 700 16px/1 Verdana, Geneva, sans-serif; text-decoration: none; }
+.brand img { width: 20px; height: 20px; flex: none; }
 .nav-links { display: flex; align-items: center; gap: 22px; font-size: 15px; }
 .nav-links a:not(.btn) { color: var(--text-2); text-decoration: none; }
 .nav-links a:not(.btn):hover { color: var(--text); }
