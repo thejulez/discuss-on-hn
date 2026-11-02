@@ -21,7 +21,7 @@ Every asset and every paragraph below follows the same arc:
 
 ## Before you start
 
-- [ ] Developer account at https://chrome.google.com/webstore/devconsole: one-time $5, and verify the contact email under **Account**.
+- [ ] Developer account at https://chrome.google.com/webstore/devconsole: one-time $5. Under **Account**, set and verify the contact email **julian@discusshn.com** (shown publicly on the listing).
 - [ ] Under **Account**, answer the EU trader question: **Non-trader** (free, open-source, no commercial activity). If you ever charge for it or use it to promote a business, switch to trader and add the required contact details.
 - [x] Website live at https://discusshn.com (privacy policy at /privacy); repository public at https://github.com/thejulez/discuss-on-hn (support link).
 - [ ] `./scripts/package.sh` run, giving `dist/discuss-on-hn-<version>.zip`.

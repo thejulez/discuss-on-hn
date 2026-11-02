@@ -59,4 +59,4 @@ The extension has no host permissions and can't read or change any site on its o
 
 ## Contact
 
-Questions or concerns: open an issue at https://github.com/thejulez/discuss-on-hn/issues.
+Questions or concerns: email julian@discusshn.com, or open an issue at https://github.com/thejulez/discuss-on-hn/issues.

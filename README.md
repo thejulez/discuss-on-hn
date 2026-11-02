@@ -107,6 +107,10 @@ Colours: HN orange `#ff6600` on HN beige `#f6f6ef`, white `#ffffff`. The mark is
 - **When the store listing goes live:** set `published: true` in `landing/script.js` and push. Every "Add to Chrome" then opens the listing.
 - `landing/privacy.html` is generated from `PRIVACY.md`; regenerate it when the policy changes.
 
+## Contact
+
+julian@discusshn.com, or [open an issue](https://github.com/thejulez/discuss-on-hn/issues).
+
 ## License
 
 MIT. Not affiliated with Y Combinator or Hacker News.
