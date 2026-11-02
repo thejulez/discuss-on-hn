@@ -104,7 +104,7 @@ Colours: HN orange `#ff6600` on HN beige `#f6f6ef`, white `#ffffff`. The mark is
 
 - **Push to `main`** and it deploys automatically, but only when something under `landing/` changed; extension-only commits are skipped.
 - **Deploy by hand:** `cd landing && vercel deploy --prod`.
-- **When the store listing goes live:** set `published: true` in `landing/script.js` and push. Every "Add to Chrome" then opens the listing.
+- **When the store listing goes live:** run `./scripts/go-live.sh`. It checks the listing is reachable, sets `published: true` in `landing/script.js`, commits and pushes; every "Add to Chrome" then opens the listing.
 - `landing/privacy.html` is generated from `PRIVACY.md`: after editing the policy, run `python3 scripts/build-privacy.py`.
 
 ## Contact
