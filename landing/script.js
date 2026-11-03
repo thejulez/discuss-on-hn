@@ -12,13 +12,13 @@
     extensionId: 'fbidofcpfgnmlfgfgakookemmgihbhjn',
 
     /**
-     * Whether the listing is live (Unlisted or Public). Flip to true once review passes:
+     * Whether the listing is live (Unlisted or Public). Set to false to fall back to GitHub:
      * an "Add to Chrome" that opens a 404 is worse than one that opens GitHub.
      */
-    published: false
+    published: true
   };
 
-  var store = 'https://chromewebstore.google.com/detail/' + CONFIG.extensionId;
+  var store = 'https://chromewebstore.google.com/detail/discuss-on-hn/' + CONFIG.extensionId;
   var github = 'https://github.com/thejulez/discuss-on-hn#install';
 
   document.querySelectorAll('[data-install]').forEach(function (a) {

@@ -40,7 +40,7 @@ No AI, no servers, no analytics, no host permissions. It only talks to HN's publ
 
 Website: **https://discusshn.com**
 
-From the Chrome Web Store: https://chromewebstore.google.com/detail/fbidofcpfgnmlfgfgakookemmgihbhjn (live once review passes).
+From the Chrome Web Store: **https://chromewebstore.google.com/detail/discuss-on-hn/fbidofcpfgnmlfgfgakookemmgihbhjn**
 
 From source:
 

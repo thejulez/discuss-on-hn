@@ -5,7 +5,7 @@
 set -e
 cd "$(dirname "$0")/.."
 id=$(sed -n "s/.*extensionId: '\([a-z]*\)'.*/\1/p" landing/script.js)
-url="https://chromewebstore.google.com/detail/$id"
+url="https://chromewebstore.google.com/detail/discuss-on-hn/$id"
 
 if ! curl -sL "$url" | grep -q "Discuss on HN"; then
   echo "The listing at $url isn't live yet (no 'Discuss on HN' on the page). Nothing changed."
